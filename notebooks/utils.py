@@ -15,12 +15,12 @@ def load_movielens_info():
     return info
 
 
-def load_movielens_ratings():
+def load_movielens_ratings(partition):
     """
     Load the ratings file from the movielens dataset
     :return: a dataframe with the ratings
     """
-    path = os.path.join(DATASET_PATH_100K_MOVIELENS, "u.data")
+    path = os.path.join(DATASET_PATH_100K_MOVIELENS, partition)
     names = ["user_id", "item_id", "rating", "timestamp"]
     ratings = pd.read_csv(path, sep="\t", header=None, names=names)
     return ratings
