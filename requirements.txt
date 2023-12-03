@@ -1,0 +1,6 @@
+pandas
+scipy
+matplotlib
+implicit
+numpy
+scikit-learn
